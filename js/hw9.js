@@ -66,3 +66,32 @@ function checkForSpam(message) {
 console.log(checkForSpam("ecwjndc ewjcnnc spam"));
 
 // 6
+let input;
+const numbers = [];
+let total = 0;
+
+do {
+  input = prompt("Введіть число");
+
+  if (input === null) {
+    break;
+  }
+
+  const number = Number(input)
+
+  if(Number.isNaN(number)){
+    continue;
+  }
+
+  numbers.push(number)
+  
+ 
+} while (true);
+
+if (numbers.length > 0) {
+  for (const num of numbers) {
+    total += num;
+  }
+}
+
+console.log(`Загальна сума чисел дорівнює ${total}`);
